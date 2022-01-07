@@ -1,4 +1,5 @@
-import './App.css'
+import logo from './logo.svg';
+import './App.css';
 import React, {Component} from 'react';
 
 class App extends React.Component {
@@ -6,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {date: new Date()};
   }
-
+  
   componentDidMount() {
     this.timerID = setInterval(
       () => this.tick(),
@@ -17,13 +18,13 @@ class App extends React.Component {
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
-
+  
   tick() {
     this.setState({
       date: new Date()
     });
   }
-
+  
   render() {
     return (
       <div>
@@ -33,4 +34,7 @@ class App extends React.Component {
     );
   }
 }
+    
+   
+
 export default App;
